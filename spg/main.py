@@ -1,3 +1,5 @@
+import os.path
+
 from PySide6.QtWidgets import QWidget, QApplication, QFileDialog
 import sys
 
@@ -17,10 +19,11 @@ class MainWindow(QWidget):
 
     def __get_filenames(self):
         self.ui.ReadLW.clear()
-        filenames, _ = QFileDialog.getOpenFileNames(self, "Выбери нужные файлы",
+        filepaths, _ = QFileDialog.getOpenFileNames(self, "Выбери нужные файлы",
                         "",
                         "Scripts (*.py)"
                                                 )
+        filenames = [os.path.basename(filepath) for filepath in filepaths]
         self.ui.ReadLW.addItems(filenames)
 
     def __print_filename(self):
