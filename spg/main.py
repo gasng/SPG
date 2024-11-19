@@ -23,7 +23,7 @@ class MainWindow(QWidget):
                         "",
                         "Scripts (*.py)"
                                                 )
-        filenames = [os.path.basename(path) for path in filepaths]
+        filenames = [os.path.basename(filepath) for filepath in filepaths]
         self.ui.ReadLW.addItems(filenames)
 
     def __print_filename(self):
