@@ -23,7 +23,66 @@ class Ui_ReadWidget(object):
     def setupUi(self, ReadWidget):
         if not ReadWidget.objectName():
             ReadWidget.setObjectName(u"ReadWidget")
-        ReadWidget.resize(612, 733)
+        ReadWidget.resize(612, 737)
+        ReadWidget.setStyleSheet(u"QWidget {\n"
+"  background-color: #fafafa; \n"
+"}\n"
+"\n"
+"QLabel {\n"
+"  color: #2c3e50;\n"
+"  font-weight: 400; \n"
+"}\n"
+"\n"
+"QLabel#heading {\n"
+"  color: #34495e; \n"
+"  font-size: 22px; \n"
+"  margin-bottom: 15px; \n"
+"}\n"
+"\n"
+"QLabel#subheading {\n"
+"  color: #95a5a6; \n"
+"  font-size: 13px; \n"
+"  font-weight: 300; \n"
+"  margin-bottom: 12px; \n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"  border-radius: 10px; \n"
+"  border: 1px solid #d5dbdb;\n"
+"  padding: 10px 20px;\n"
+"  background-color: #fff;\n"
+"  font-size: 14px;\n"
+"  color: #34495e; \n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid #3498db; \n"
+"  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); \n"
+"}\n"
+"\n"
+"QLineEdit::placeholder {\n"
+"  color: #bdc3c7; \n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"  background-color: #9b59b6; \n"
+"  color: #fff; \n"
+"  border-radius: 12px; \n"
+"  border: 1px solid #9b59b6; \n"
+"  padding: 12px 25px; \n"
+"  margin-top: 18px; \n"
+"  outline: none; \n"
+
+"}\n"
+"\n"
+"QPushButton:hover,\n"
+"QPush"
+                        "Button:focus {\n"
+"  background-color: #8e44ad; \n"
+"  border: 1px solid #8e44ad;\n"
+
+"}\n"
+"")
         self.verticalLayout = QVBoxLayout(ReadWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.MainFrame = QFrame(ReadWidget)
@@ -83,4 +142,3 @@ class Ui_ReadWidget(object):
         self.ReadGB.setTitle(QCoreApplication.translate("ReadWidget", u"\u0427\u0442\u0435\u043d\u0438\u0435", None))
         self.ChooseBtn.setText(QCoreApplication.translate("ReadWidget", u"\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0444\u0430\u0439\u043b\u044b", None))
     # retranslateUi
-

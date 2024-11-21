@@ -7,11 +7,71 @@
     <x>0</x>
     <y>0</y>
     <width>612</width>
-    <height>733</height>
+    <height>737</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+  background-color: #fafafa;
+}
+
+QLabel {
+  color: #2c3e50;
+  font-weight: 400;
+}
+
+QLabel#heading {
+  color: #34495e;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+QLabel#subheading {
+  color: #95a5a6;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+QLineEdit {
+  border-radius: 10px;
+  border: 1px solid #d5dbdb;
+  padding: 10px 20px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #34495e;
+}
+
+QLineEdit:focus {
+  border: 1px solid #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+QLineEdit::placeholder {
+  color: #bdc3c7;
+}
+
+QPushButton {
+  background-color: #9b59b6;
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid #9b59b6;
+  padding: 12px 25px;
+  margin-top: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+QPushButton:hover,
+QPushButton:focus {
+  background-color: #8e44ad;
+  border: 1px solid #8e44ad;
+  transform: translateY(-3px);
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
