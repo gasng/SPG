@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>612</width>
-    <height>737</height>
+    <height>767</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,6 +21,7 @@
 QLabel {
   color: #2c3e50; /* Цвет текста */
   font-weight: 400; /*  шрифт */
+  margin: 10px;
 }
 /* Заголовок */
 QLabel#heading {
@@ -55,10 +56,10 @@ QLineEdit::placeholder {
 }
 
 QPushButton {
-  background-color: #9b59b6; /* Фиолетовый фон */
+  background-color: #32746D; /* Фиолетовый фон */
   color: #fff;
   border-radius: 12px;
-  border: 1px solid #9b59b6;
+  border: 1px solid #32746D;
   padding: 12px 25px;  /* Отступы внутри кнопки */
   margin-top: 18px;/* Отступ сверху */
   outline: none; /* Убирает контур вокруг кнопки */
@@ -67,14 +68,21 @@ QPushButton {
 
 QPushButton:hover,
 QPushButton:focus {
-  background-color: #8e44ad;
-  border: 1px solid #8e44ad;
+  background-color: #285D57;
+  border: 1px solid #285D57;
 }
 </string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QFrame" name="MainFrame">
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Закругляем углы */
+    background: #fafafa; /* Цвет фона виджета */
+}</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -102,6 +110,13 @@ QPushButton:focus {
           <height>16777215</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame{
+    border: 0px solid #ccc;
+    border-radius: 10px; /* Закругляем углы */
+    background: #fafafa; /* Цвет фона виджета */
+}</string>
+        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -111,18 +126,58 @@ QPushButton:focus {
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
           <widget class="QGroupBox" name="ReadGB">
+           <property name="styleSheet">
+            <string notr="true">QGroupBox {
+       background: #f0f0f0; 
+       border: 2px solid gray;        /* Рамка блока */
+       border-radius: 8px;           /* Скругление углов */
+       margin-top: 20 px;             /* Отступ заголовка сверху */
+   }
+
+   QGroupBox::title {
+       subcontrol-origin: margin;    /* Расположение заголовка */
+       subcontrol-position: top left; /* Позиция заголовка (сверху слева) */
+       padding: 0.5 px;               /* Отступ внутри заголовка */
+       color: black;                  /* Цвет текста заголовка */
+       font: bold 30 px;              /* Шрифт (жирный, 14px) */
+   }
+</string>
+           </property>
            <property name="title">
-            <string>Чтение</string>
+            <string>Считывание файлов:</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="QListWidget" name="ReadLW"/>
+             <widget class="QListWidget" name="ReadLW">
+              <property name="styleSheet">
+               <string notr="true">QListWidget {
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Закругляем углы */
+    background: #fafafa; /* Цвет фона виджета */
+}
+
+QListWidget::item {
+    padding: 5px; /* Отступы для элементов */
+}
+
+QListWidget::item:selected {
+    background: #addfad; /* Выбранный элемент */
+    color: #000;
+    border-radius: 10px;
+}</string>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
          </item>
          <item>
           <widget class="QPushButton" name="ChooseBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    margin-top: 7px;  /* Поднять на 5px вверх */
+}</string>
+           </property>
            <property name="text">
             <string>Выбрать файлы</string>
            </property>
