@@ -25,7 +25,7 @@ class Ui_ReadWidget(object):
             ReadWidget.setObjectName(u"ReadWidget")
         ReadWidget.resize(612, 737)
         ReadWidget.setStyleSheet(u"QWidget {\n"
-"  background-color: #fafafa; \n"
+"  background-color: #fafafa; \n" 
 "}\n"
 "\n"
 "QLabel {\n"

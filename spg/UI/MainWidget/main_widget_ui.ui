@@ -19,57 +19,56 @@
 }
 
 QLabel {
-  color: #2c3e50;
-  font-weight: 400;
+  color: #2c3e50; /* Цвет текста */
+  font-weight: 400; /*  шрифт */
 }
-
+/* Заголовок */
 QLabel#heading {
-  color: #34495e;
-  font-size: 22px;
-  margin-bottom: 15px;
+  color: #34495e; /* Темно-серый цвет текста */
+  font-size: 22px; /* Размер шрифта */
+  margin-bottom: 15px; /* Отступ снизу */
 }
-
+/* Подзаголовок */
 QLabel#subheading {
-  color: #95a5a6;
-  font-size: 13px;
+  color: #95a5a6; /* Светло-серый цвет текста */
+  font-size: 13px; /* Размер шрифта для подзаголовка */
   font-weight: 300;
   margin-bottom: 12px;
 }
-
+/* Стиль для поля ввода */
 QLineEdit {
-  border-radius: 10px;
-  border: 1px solid #d5dbdb;
-  padding: 10px 20px;
+  border-radius: 10px; /* Закругленные углы */
+  border: 1px solid #d5dbdb; /* Светло-серая рамка */
+  padding: 10px 20px; /* Отступы внутри поля */
   background-color: #fff;
   font-size: 14px;
   color: #34495e;
 }
-
+/* Стиль для поля ввода при фокусе */
 QLineEdit:focus {
-  border: 1px solid #3498db;
-  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+  border: 1px solid #3498db; /* Синяя рамка при фокусе */
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.4); /*  свечение вокруг поля */
 }
-
+/* Подсказка для поля ввода */
 QLineEdit::placeholder {
-  color: #bdc3c7;
+  color: #bdc3c7; /* Светло-серый цвет подсказки */
 }
 
 QPushButton {
-  background-color: #9b59b6;
+  background-color: #9b59b6; /* Фиолетовый фон */
   color: #fff;
   border-radius: 12px;
   border: 1px solid #9b59b6;
-  padding: 12px 25px;
-  margin-top: 18px;
-  outline: none;
-  transition: all 0.3s ease;
+  padding: 12px 25px;  /* Отступы внутри кнопки */
+  margin-top: 18px;/* Отступ сверху */
+  outline: none; /* Убирает контур вокруг кнопки */
+
 }
 
 QPushButton:hover,
 QPushButton:focus {
   background-color: #8e44ad;
   border: 1px solid #8e44ad;
-  transform: translateY(-3px);
 }
 </string>
   </property>
