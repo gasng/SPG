@@ -5,6 +5,7 @@ import sys
 
 from spg.UI import Ui_ReadWidget
 
+#Коментарий на возможность
 
 class MainWindow(QWidget):
     def __init__(self):
