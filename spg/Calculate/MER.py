@@ -1,5 +1,5 @@
 import numpy as np
-
+g
 def MER(signal, n, threshold_p, threshold_s):
     squared_signal = signal ** 2
     right = np.array([np.sum(squared_signal[i: i + n]) for i in range(n - 1, len(squared_signal) - n + 1)])
