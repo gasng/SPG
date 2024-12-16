@@ -9,6 +9,7 @@ def const_detrend(data):
 def deconvolution(data):
     return data
 
+
 def butter_lowpass(lowcut, fs, order=5):
     return signal.butter(order, lowcut, fs=fs, btype='low')
 def butter_lowpass_filter(data, lowcut, fs, order=5):
