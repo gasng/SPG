@@ -38,6 +38,6 @@ def main():
 
     return app.exec_()
 
-
+main()
 if getattr(sys, 'frozen', False):
     main()
