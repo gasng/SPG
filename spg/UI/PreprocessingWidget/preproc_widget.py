@@ -45,14 +45,19 @@ class Ui_Form(object):
         font = QtGui.QFont()
         font.setBold(True)
         font.setItalic(False)
+
+
         self.Header.setFont(font)
         self.Header.setObjectName("Header")
         self.verticalLayout.addWidget(self.Header)
+
+
         self.dataview = QtWidgets.QListView(parent=self.horizontalLayoutWidget)
         self.dataview.setAcceptDrops(True)
         self.dataview.setVerticalScrollMode(QtWidgets.QAbstractItemView.ScrollMode.ScrollPerItem)
         self.dataview.setObjectName("dataview")
         self.verticalLayout.addWidget(self.dataview)
+
         self.PUSHFORDATA = QtWidgets.QPushButton(parent=self.horizontalLayoutWidget)
         font = QtGui.QFont()
         font.setBold(True)
@@ -60,33 +65,45 @@ class Ui_Form(object):
         self.PUSHFORDATA.setFont(font)
         self.PUSHFORDATA.setObjectName("PUSHFORDATA")
         self.verticalLayout.addWidget(self.PUSHFORDATA)
+
         self.choice = QtWidgets.QToolBox(parent=self.horizontalLayoutWidget)
         self.choice.setMouseTracking(True)
         self.choice.setObjectName("choice")
+
+
+        #Detrends
         self.detrend = QtWidgets.QWidget()
         self.detrend.setGeometry(QtCore.QRect(0, 0, 460, 75))
         self.detrend.setObjectName("detrend")
         self.LIN_DETREND_B = QtWidgets.QPushButton(parent=self.detrend)
         self.LIN_DETREND_B.setGeometry(QtCore.QRect(20, 0, 241, 28))
         self.LIN_DETREND_B.setObjectName("LIN_DETREND_B")
+
         self.CONST_DETREN_B = QtWidgets.QPushButton(parent=self.detrend)
         self.CONST_DETREN_B.setGeometry(QtCore.QRect(20, 30, 241, 28))
         self.CONST_DETREN_B.setObjectName("CONST_DETREN_B")
+
         self.choice.addItem(self.detrend, "")
+
+        #Lowpass
         self.lowpass = QtWidgets.QWidget()
         self.lowpass.setGeometry(QtCore.QRect(0, 0, 460, 75))
         self.lowpass.setObjectName("lowpass")
+
         self.label_low_frec = QtWidgets.QLabel(parent=self.lowpass)
         self.label_low_frec.setGeometry(QtCore.QRect(14, 0, 86, 28))
         self.label_low_frec.setObjectName("label_low_frec")
+
         self.LowButton = QtWidgets.QPushButton(parent=self.lowpass)
         self.LowButton.setGeometry(QtCore.QRect(200, 0, 121, 28))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.LowButton.sizePolicy().hasHeightForWidth())
+
         self.LowButton.setSizePolicy(sizePolicy)
         self.LowButton.setObjectName("LowButton")
+
         self.FILTER_FREQ_LOW = QtWidgets.QDoubleSpinBox(parent=self.lowpass)
         self.FILTER_FREQ_LOW.setGeometry(QtCore.QRect(107, 0, 88, 28))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
@@ -95,72 +112,102 @@ class Ui_Form(object):
         sizePolicy.setHeightForWidth(self.FILTER_FREQ_LOW.sizePolicy().hasHeightForWidth())
         self.FILTER_FREQ_LOW.setSizePolicy(sizePolicy)
         self.FILTER_FREQ_LOW.setObjectName("FILTER_FREQ_LOW")
+
         self.choice.addItem(self.lowpass, "")
+
+
+        #Highpass
         self.highpass = QtWidgets.QWidget()
         self.highpass.setGeometry(QtCore.QRect(0, 0, 460, 75))
         self.highpass.setObjectName("highpass")
+
         self.HighButton = QtWidgets.QPushButton(parent=self.highpass)
         self.HighButton.setGeometry(QtCore.QRect(200, 0, 121, 28))
         self.HighButton.setObjectName("HighButton")
+
         self.label_high_freq = QtWidgets.QLabel(parent=self.highpass)
         self.label_high_freq.setGeometry(QtCore.QRect(14, 0, 86, 28))
         self.label_high_freq.setObjectName("label_high_freq")
+
         self.FILTER_FREQ_HIGH = QtWidgets.QDoubleSpinBox(parent=self.highpass)
         self.FILTER_FREQ_HIGH.setGeometry(QtCore.QRect(107, 0, 88, 28))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.FILTER_FREQ_HIGH.sizePolicy().hasHeightForWidth())
+
         self.FILTER_FREQ_HIGH.setSizePolicy(sizePolicy)
         self.FILTER_FREQ_HIGH.setObjectName("FILTER_FREQ_HIGH")
+
         self.choice.addItem(self.highpass, "")
+
+
+        #Bandpass
         self.bandpass = QtWidgets.QWidget()
         self.bandpass.setGeometry(QtCore.QRect(0, 0, 460, 75))
         self.bandpass.setObjectName("bandpass")
+
         self.label_lowcut = QtWidgets.QLabel(parent=self.bandpass)
         self.label_lowcut.setGeometry(QtCore.QRect(7, 0, 101, 28))
         self.label_lowcut.setObjectName("label_lowcut")
+
         self.LOW_FREQ = QtWidgets.QDoubleSpinBox(parent=self.bandpass)
         self.LOW_FREQ.setGeometry(QtCore.QRect(120, 0, 88, 28))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.LOW_FREQ.sizePolicy().hasHeightForWidth())
+
         self.LOW_FREQ.setSizePolicy(sizePolicy)
         self.LOW_FREQ.setObjectName("LOW_FREQ")
+
         self.BandButton = QtWidgets.QPushButton(parent=self.bandpass)
         self.BandButton.setGeometry(QtCore.QRect(210, 10, 121, 28))
         self.BandButton.setObjectName("BandButton")
+
         self.label_highcut = QtWidgets.QLabel(parent=self.bandpass)
         self.label_highcut.setGeometry(QtCore.QRect(7, 30, 101, 28))
         self.label_highcut.setObjectName("label_highcut")
         self.HIGH_FREQ = QtWidgets.QDoubleSpinBox(parent=self.bandpass)
+
         self.HIGH_FREQ.setGeometry(QtCore.QRect(120, 30, 88, 28))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.HIGH_FREQ.sizePolicy().hasHeightForWidth())
+
         self.HIGH_FREQ.setSizePolicy(sizePolicy)
         self.HIGH_FREQ.setObjectName("HIGH_FREQ")
+
         self.choice.addItem(self.bandpass, "")
+
+
+        #Decon
         self.decovolve = QtWidgets.QWidget()
         self.decovolve.setGeometry(QtCore.QRect(0, 0, 460, 75))
         self.decovolve.setObjectName("decovolve")
+
         self.DeconButton = QtWidgets.QPushButton(parent=self.decovolve)
         self.DeconButton.setGeometry(QtCore.QRect(203, 0, 171, 28))
         self.DeconButton.setObjectName("DeconButton")
+
         self.label_decon = QtWidgets.QLabel(parent=self.decovolve)
         self.label_decon.setGeometry(QtCore.QRect(17, 0, 86, 28))
         self.label_decon.setObjectName("label_decon")
+
         self.DECON_FREQ = QtWidgets.QDoubleSpinBox(parent=self.decovolve)
         self.DECON_FREQ.setGeometry(QtCore.QRect(110, 0, 88, 28))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.DECON_FREQ.sizePolicy().hasHeightForWidth())
+
         self.DECON_FREQ.setSizePolicy(sizePolicy)
         self.DECON_FREQ.setObjectName("DECON_FREQ")
+
         self.choice.addItem(self.decovolve, "")
+
+
         self.verticalLayout.addWidget(self.choice)
         self.Header.raise_()
         self.PUSHFORDATA.raise_()
